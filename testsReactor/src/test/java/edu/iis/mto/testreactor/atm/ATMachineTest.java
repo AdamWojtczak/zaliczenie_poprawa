@@ -65,7 +65,7 @@ public class ATMachineTest {
 
     @Test
     public void catchinSomeExceptions() throws ATMOperationException {
-        Mockito.doThrow(ATMOperationException.class).validateAmount(money);
+//        Mockito.doThrow(ATMOperationException.class).validateAmount(money);
         Withdrawal withdrawal = atMachine.withdraw(pinCode, card, money);
     }
 
@@ -78,9 +78,6 @@ public class ATMachineTest {
         return Withdrawal.create(banknotesPackList);
     }
 
-    private Withdrawal failure(PinCode pin, Card card, Money amount) {
-
-    }
 
     @Test
     public void itCompiles() {
